@@ -105,11 +105,21 @@ body{
 }
 
 .definition .photo_definition:hover{
-    transform: scale(1.1);
+    transform: scale(1.07);
 }
 
 .img1{
     background: url("./../img/img1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img2{
+    background: url("./../img/img2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img3{
+    background: url("./../img/img3.jpg");
     background-position: center;
     background-size: cover;
 }
