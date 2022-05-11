@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,700;1,400&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,76 +10,103 @@
 html {
     font-size: 62.5%;
 }
+
 body{
     font-size: 1.6rem;
-    scroll-behavior: smooth;
-    font-family: 'Nunito', sans-serif;
-    /* background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%); */   
+    /* background: radial-gradient(#d35400, black); */
+    /* background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%); */
+}
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(224, 63, 35);
+    overflow: hidden;
+}
+
+.container .title h1{
+    margin: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-color: yellow;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.barrer {
+    position: absolute;
+    left: 40rem;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    border-top: 100vh solid transparent;
+    border-left: 100vw solid transparent;
+    border-right: 100vw solid rgb(231, 51, 60);
+    border-bottom: 100vh solid rgb(231, 51, 60); 
+    /* background-color: rgb(231, 51, 60);*/
+}
+.container .frame {
+    background-color: blue;
+    z-index: 2;
+    width: 70%;
+    height: 70%;
+    border-radius: 2rem;
+    box-shadow: 2rem 2rem 8rem rgba(0,0,0,.3);    
+    display: flex;
+    
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    transition: all .9s;
+}
+
+
+.container .frame .container_info{
+    width: 90%;
+    height: 90%;
+    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(15, 17, 27);
-    flex-direction: column;
 }
-.container {
-    position: relative;
-    margin-top: 25rem;
-    max-width: 70rem;
-    transform: skewY(-20deg);  
+.container .frame .container_info span{
+    margin: 30px;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
 }
-.container .imgBx {
-    position: relative;
-    width: 100%;
-    height: 18rem;
-    transform-origin: bottom;
-    transform: skewX(45deg);
+
+
+.container .frame .container_info .img_conclution{
+    width: 65%;
+    border-radius: 10px;
+    background: url("./../img/conclusion/desarrollo.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 90%;   
+    transition: all 9s;
 }
-.container .imgBx img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: .1;
-    transition: .5s;
+
+
+.container .frame .container_info .img_conclution:hover{
+    transform: scale(1.07);
 }
-.container .imgBx:hover img:nth-child(3) {
-    transform: translate(4rem, -4rem);
-    opacity: 1;
-}
-.container .imgBx:hover img:nth-child(2) {
-    transform: translate(2rem, -2rem);
-    opacity: .5;
-}
-.container .imgBx:hover img:nth-child(1) {
-    /* transform: translate(1rem, -1rem); */
-}
-.container h2 {
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    color: white;
-    font-size: 4rem;
-}
-.container .skew {
-    transform-origin: top;
-    transform: skewX(45deg);
-    color: white;
-    font-size: 1.6rem;
-}
-.container .skew a {
-    position: relative;
-    color: white;
-    display: inline-block;
-    transform-origin: top;
-    transform: skewX(-45deg);
-    padding: 1rem;
-    margin-top: 2rem;
-    border: .2rem solid white;
-}
-.container .skew a:hover {
-    color: rgb(15, 17, 27);
-    background-color: white;
+
+.button_picture{
+    background-color: yellow;
+    margin: 20px;
+    font-size: 50px;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
 }
