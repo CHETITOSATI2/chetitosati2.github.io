@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +13,7 @@ main {
 }
 body{
     font-size: 1.6rem;
-    background-color: black;
+    background: radial-gradient(rgb(21, 21, 101), black);
     /* background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%); */
 }
 .container {
@@ -23,43 +25,128 @@ body{
     align-items: center;
 }
 .controls {
-    width: 90%;
+    width: 100%;
     height: 10vh;
-    background-color: red;
     position: absolute;
     bottom: 0;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 .preview {
-    background-color: white;
+    display: flex;
+    background-color: transparent;
     border-radius: 1rem;
     border: .1rem solid black;
     width: 10%;
     height: 100%;
     transform: scale(1);
     transition: 1s;
-    z-index: 2;
+    z-index: 3;
+    cursor: pointer;
+    overflow: hidden;
 }
-.preview:nth-child(2) {
+.preview img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    object-position: center center;
 }
+
 .preview:hover {
-    transform: scale(1.1);
-}
-.preview:hover ~ .preview{
-    transform: translate(1rem);
+    transform: scale(1.15);
 }
 .modal {
     display: flex;
+    position: absolute;
+    bottom: calc(10vh + 1rem);
+    left: 0;
+    width: 100%;
+    /* height: calc(100vh - (10vh + 1rem)); */
+    height: calc(100vh - (10vh + 1rem));
+    background-color: transparent;
+    color: white;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: transparent;
+    transition: 1s;
+}
+.modal.minimize {
+    animation-name: animate-minimizing;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    height: 50vh;
+}
+@keyframes animate-minimizing {
+    0% {
+        height: calc(100vh - (10vh + 1rem));
+    }
+    100% {
+        height: 50vh;
+    }
+}
+.modal .title, .modal .subtitle, .modal .comment {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 2rem;
+}
+.modal.video-has-loaded {
+    height: 50vh;
+    background-color: red;
+}
+.modal .title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.modal .subtitle, .modal .comment {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 6rem;
+}
+.modal .comment {
+    width: 80%;
+}
+.container-video {
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.container-video .screen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 .modal.active {
+    /*
     transform: scale(1);
     display: flex;
     position: absolute;
@@ -72,6 +159,7 @@ body{
     animation-name: animate-grow;
     animation-duration: 5s;
     animation-iteration-count: 1;
+    */
 }
 @keyframes animate-grow {
     0% {
@@ -84,6 +172,7 @@ body{
 /* {
     transform: translate(-1rem);
 } */
+/*
 .title {
     width: 100%;
     height: 10vh;
@@ -156,6 +245,7 @@ body{
 .photos .photo:nth-child(17) {
     grid-area: p17;
 }
+*/
 /*
 .photos .row {
     position: relative;
