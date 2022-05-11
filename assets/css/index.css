@@ -136,6 +136,31 @@ body{
     background-position: center;
     background-size: cover;
 }
+.img6{
+    background: url("./../img/medicina.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img7{
+    background: url("./../img/automotriz.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img8{
+    background: url("./../img/manufactura.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img9{
+    background: url("./../img/mina.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img10{
+    background: url("./../img/agricola.jpg");
+    background-position: center;
+    background-size: cover;
+}
 
 
 
