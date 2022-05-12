@@ -43,6 +43,19 @@
             img:"./assets/img/conclusion/medio ambiente.jpg"
         }]
     </script>
+     <script>
+        function Descarga(url,name){
+        
+        let a = document.createElement("a");
+        a.href = url;
+        a.target = "_blank";
+        a.download = name;
+
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+    </script>
   
 </head>
 <body>
@@ -78,9 +91,31 @@
                 </div>
                 <span id="button_plus" class="button_picture" style=" -webkit-text-stroke: 2px black; color: transparent;"> <i class="fa fa-arrow-right"></i> </span>
             </div>
-            <div class="barrer">
-
+            <div class="footer">
+                <div class="download_container">
+                   
+                    <!--<button class="button_download powerpoint" onclick='Descarga("./assets/files/pp.pptx","powerpointDescargado.pptx")'><i class="fa fa-file-powerpoint-o"></i></button>-->
+                    <button title="Equipo Act1" class="button_download pdf" onclick='Descarga("./assets/files/Equipo-2-Grupo-037-A1-ATI (1).pdf","Equipo-2-Grupo-037-A1-ATI (1).pdf")'><i class="fa fa-file-pdf-o"></i></button>
+                    <button title="Equipo Act2" class="button_download pdf" onclick='Descarga("./assets/files/Equipo-2-Grupo-037-A2-ATI (1).pdf","Equipo-2-Grupo-037-A2-ATI (1).pdf")'><i class="fa fa-file-pdf-o"></i></button>
+                    <button title="GRAFICOS DE EXCEL" class="button_download excel" onclick='Descarga("./assets/files/GRAFICOS DE EXCEL-Problematiac-Equipo-2 (1).xlsx","GRAFICOS DE EXCEL-Problematiac-Equipo-2 (1).xlsx")'><i class="fa fa-file-excel-o"></i></button>
+                    <button title="Video de youtube" class="button_download video" onclick='document.getElementsByClassName("modal_video_container")[0].classList.add("active")'><i class="fa fa-youtube-play"></i></button>
+                </div>
+                
             </div>
+            <div class="barrer">
+                
+            </div>
+        </section>
+
+        <section class="modal_video_container">
+            <div class="modal_video">
+                <button class="button_youtube" onclick='document.getElementsByClassName("modal_video_container")[0].classList.remove("active")'><i class="fa fa-close"></i></button>
+                <div class="modal_video_show">
+                    <iframe width="90%" height="90%" src="https://www.youtube.com/embed/whx6HgnCmY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+
         </section>
     </main>
 

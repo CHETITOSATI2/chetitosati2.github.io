@@ -143,6 +143,7 @@ main {
     background-size: cover;
     height: 90%;   
     transition: all .9s;
+    transform: rotate(-7deg);
 }
 
 
@@ -159,8 +160,149 @@ main {
     cursor: pointer;
     color: white;
     transition: all .7s;
+    
 }
 
 .button_picture:hover{
     transform: scale(1.2);
 }
+
+
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer .download_container{
+    background-color: transparent;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .download_container .button_download{
+    padding: 20px;
+    background-color: transparent;
+    color:white;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 2px solid white;
+    cursor:pointer;
+    
+    font-size: 22px;
+    font-style: italic;
+    margin: 10px;
+    border-radius: 50%;
+
+}
+.button_youtube{
+    padding: 20px;
+    background-color: transparent;
+    color:black;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 2px solid #fff;
+    cursor:pointer;
+    
+    font-size: 22px;
+    font-style: italic;
+ 
+    border-radius: 50%;
+    align-self: flex-end;
+
+}
+.footer .download_container .powerpoint:hover{
+    border:2px solid #fa8231;
+    background-color: #fa8231;
+    color:black;
+    content: "Powerpoint";
+}
+.footer .download_container .pdf:hover{
+    border:2px solid red;
+    background-color: red;
+    color:white;
+    content: "Pdf";
+}
+
+.footer .download_container .excel:hover{
+    border:2px solid #111;
+    background-color: #111;
+    color:white;
+    content: "Excel";
+}
+
+.footer .download_container .video:hover{
+    border:2px solid red;
+    background-color: red;
+    color:white;
+    content: "Video";
+}
+
+
+.modal_video_container{
+    display: none;
+
+}
+.modal_video_container.active{
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 1, 1, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: show .8s linear forwards;
+    transition: all 1s;
+}
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.modal_video{
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+.modal_video_show{
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+
