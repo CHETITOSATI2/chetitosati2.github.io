@@ -6,8 +6,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: .7s;
-    transition-delay: .9s;
+    transition:all 1s;
+    transition-delay: 1s;
     transform-origin: right;
 }
 html {
@@ -103,7 +103,7 @@ main {
     background-position: center;
     background-size: cover;
     height: 90%;   
-    transition: all 9s;
+    transition: all .9s;
 }
 
 
@@ -119,4 +119,9 @@ main {
     font-weight: bold;
     cursor: pointer;
     color: white;
+    transition: all .7s;
+}
+
+.button_picture:hover{
+    transform: scale(1.2);
 }
