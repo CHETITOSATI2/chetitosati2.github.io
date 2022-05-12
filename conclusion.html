@@ -69,12 +69,12 @@
                 <h1>¿Cuáles son nuestras conclusiones?</h1>
             </div>
             <div class="frame">
-                <span id="button_minus" class="button_picture" style="color: rgb(231, 51, 60);"> <i class="fa fa-arrow-left"></i> </span>
+                <span id="button_minus" class="button_picture" style=" -webkit-text-stroke: 2px black; color: transparent;"> <i class="fa fa-arrow-left"></i> </span>
                 <div class="container_info">
                     <span id="info_conclution">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut sed libero ducimus veritatis!</span>
                     <img src="" class="img_conclution" id="image_conclution"></img>
                 </div>
-                <span id="button_plus" class="button_picture" style="color: #feca57;"> <i class="fa fa-arrow-right"></i> </span>
+                <span id="button_plus" class="button_picture" style=" -webkit-text-stroke: 2px black; color: transparent;"> <i class="fa fa-arrow-right"></i> </span>
             </div>
             <div class="barrer">
 
@@ -121,24 +121,7 @@
 
         })
         
-        var timer = setInterval(displayImg,5000);
-        function displayImg(){
-            let stateArray = data.length - 1;
-            if(counter < stateArray){
-                
-                counter++;
-                
-                $img.src = "" + data[counter].img;
-                $info.textContent = data[counter].text;
-            }else if(counter > 0){
-                
-                counter--;
-                $img.src = "" + data[counter].img;
-                $info.textContent = data[counter].text;
-            }else{
-                clearInterval(timer)
-            }
-        }
+     
     </script>
 </body>
 </html>

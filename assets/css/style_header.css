@@ -53,11 +53,12 @@
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.9);
     top:50px;
-    right:-100%;
+    right:-600%;
     transition:all .3s;
     z-index: 2;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .header .container_menu .menu_item{
     display: block;
