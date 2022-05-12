@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+main {
+    
+}
+body{
+    font-size: 1.6rem;
+    background: radial-gradient(rgb(21, 21, 101), black);
+    /* background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%); */
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.controls {
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.preview {
+    display: flex;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: .1rem solid black;
+    width: 10%;
+    height: 100%;
+    transform: scale(1);
+    transition: 1s;
+    z-index: 3;
+    cursor: pointer;
+    overflow: hidden;
+}
+.preview img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.preview:hover {
+    transform: scale(1.15);
+}
+.modal {
+    display: flex;
+    position: absolute;
+    bottom: calc(10vh + 1rem);
+    left: 0;
+    width: 100%;
+    /* height: calc(100vh - (10vh + 1rem)); */
+    height: calc(100vh - (10vh + 1rem));
+    background-color: transparent;
+    color: white;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: transparent;
+    transition: 1s;
+}
+.modal.minimize {
+   
+   
+    height: 50vh;
+    justify-content: flex-end;
+}
+.modal.minimize div {
+    margin: 1rem;
+}
+@keyframes animate-minimizing {
+    0% {
+        height: calc(100vh - (10vh + 1rem));
+    }
+    100% {
+        height: 50vh;
+    }
+}
+.modal .title, .modal .subtitle, .modal .comment {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 2rem;
+}
+.modal.video-has-loaded {
+    height: 50vh;
+    background-color: red;
+}
+.modal .title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.modal .subtitle, .modal .comment {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 6rem;
+}
+.modal .comment {
+    width: 80%;
+}
+.container-video {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.container-video .screen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.modal.active {
+    /*
+    transform: scale(1);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+
+    animation-name: animate-grow;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    */
+}
+@keyframes animate-grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* {
+    transform: translate(-1rem);
+} */
+/*
+.title {
+    width: 100%;
+    height: 10vh;
+}
+.photos {
+    position: relative;
+    min-width: 90rem;
+    min-height: 80rem;
+    background-color: rgb(48, 46, 46);
+    display: grid;
+    grid-template-areas: "p1 p1 p2 p3 p4"
+                        "p1 p1 p5 p6 p7"
+                        "p8 p9 p10 p11 p12"
+                        "p13 p14 p15 p16 p17";
+}
+.photos .photo {
+    border-radius: 2rem;
+    background-color: white;
+    border: 1px solid black;
+}
+.photos .photo:nth-child(1) {
+    grid-area: p1;
+}
+.photos .photo:nth-child(2) {
+    grid-area: p2;
+    background: url("./../img/advanges-disadvanges/water-contamination.jpg");
+}
+.photos .photo:nth-child(3) {
+    grid-area: p3;
+}
+.photos .photo:nth-child(4) {
+    grid-area: p4;
+}
+.photos .photo:nth-child(5) {
+    grid-area: p5;
+}
+.photos .photo:nth-child(6) {
+    grid-area: p6;
+}
+.photos .photo:nth-child(7) {
+    grid-area: p7;
+}
+.photos .photo:nth-child(8) {
+    grid-area: p8;
+}
+.photos .photo:nth-child(9) {
+    grid-area: p9;
+}
+.photos .photo:nth-child(10) {
+    grid-area: p10;
+}
+.photos .photo:nth-child(11) {
+    grid-area: p11;
+}
+.photos .photo:nth-child(12) {
+    grid-area: p12;
+}
+.photos .photo:nth-child(13) {
+    grid-area: p13;
+}
+.photos .photo:nth-child(14) {
+    grid-area: p14;
+}
+.photos .photo:nth-child(15) {
+    grid-area: p15;
+}
+.photos .photo:nth-child(16) {
+    grid-area: p16;
+}
+.photos .photo:nth-child(17) {
+    grid-area: p17;
+}
+*/
+/*
+.photos .row {
+    position: relative;
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    overflow: hidden;
+}
+.photos .mini-row {
+    position: absolute;
+    width: 10vw;
+    height: 100%;
+    background-color: blue;
+    animation-name: animate;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate {
+    
+}
+.photos .mini-row:nth-child(2) {
+    background-color: yellow;
+    left: 100vw;
+}
+*/
+/*
+.photos div {
+    width: 14.28vw;
+    background-color: rgb(204, 193, 193);
+    border: 1px solid black;
+
+    /* animation-name: animate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; *//*
+}
+.photos div:nth-child(1) {
+    background-color: red;
+}
+.photos div:nth-child(2) {
+    background-color: blue;
+}
+.photos div:nth-child(3) {
+    background-color: green;
+}
+.photos div:nth-child(4) {
+    background-color: yellow;
+}
+.photos div:nth-child(5) {
+    background-color: orange;
+}
+.photos div:nth-child(6) {
+    background-color: white;
+}
+.photos div:nth-child(7) {
+    background-color: brown;
+}
+*/
+/*
+
+*/

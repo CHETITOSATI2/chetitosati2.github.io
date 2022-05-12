@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusiones</title>
+
+    <link rel="stylesheet" href="./assets/css/conclusion.css">
+
+    <link rel="stylesheet" href="assets/css/style_header.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+    <script src="assets/js/jquery-3.2.1.js"></script>
+    <script src="assets/js/events.js"></script>
+    <script>
+        const data = [{
+            text:"La mecatrónica nos ayuda evaluar y crear alternativas para el uso racional de los recursos disponibles en los procesos productivos.",
+            img:"./assets/img/conclusion/oportunidad.jpg"
+        },
+        {
+            text:"Debemos de participar en el desarrollo de sistemas para el aprovechamiento de fuentes no convencionales de energía.",
+            img:"./assets/img/conclusion/eolica.jpg"
+        },
+        {
+            text:"Hay que identificar áreas de oportunidad para analizar y comprender problemas de ingeniería, proponiendo soluciones integrales con tecnologías emergentes, con un sentido de desarrollo sustentable.",
+            img:"./assets/img//conclusion/solucion.jpg"
+        },
+        {
+            text:"Debemos de tener la capacidad de coordinar y trabajar en equipos multidisciplinarios. Manejar herramientas actuales y de vanguardia para la solución de problemas de la ingeniería. Controlar, automatizar, operar y supervisar, evaluar y mantener procesos de ingeniería desde una perspectiva Mecatrónica. ",
+            img:"./assets/img/conclusion/equipo.jpg"
+        },
+        {
+            text:"Podemos administrar y asegurar la calidad, eficiencia, productividad y rentabilidad de los sistemas, procesos y productos. Ser creativo, emprendedor y comprometido en el ejercicio de su formación con amplio sentido ético y de actualización continua.",
+            img:"./assets/img/conclusion/proceso.jpg"
+        },
+        {
+            text:"Los profesionales de Ingeniería Mecatrónica son responsables directos sobre las actuaciones que se realizan sobre el medio ambiente, no sólo deben incorporar los aspectos ambientales a la hora de diseñar y llevar a cabo los proyectos, sino también deben desarrollar la suficiente sensibilidad ambiental y social.",
+            img:"./assets/img/conclusion/esfuerzo.jpg"
+        },
+        {
+            text:"Hay que contribuir al desarrollo sustentable de la industria a través aplicación de tecnologías con ética de trabajo y creatividad.",
+            img:"./assets/img/conclusion/medio ambiente.jpg"
+        }]
+    </script>
+     <script>
+        function Descarga(url,name){
+        
+        let a = document.createElement("a");
+        a.href = url;
+        a.target = "_blank";
+        a.download = name;
+
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+    </script>
+  
+</head>
+<body>
+    <header class="header">
+
+        <div class="container_name">
+            <p class="container_name_text"></p>
+        </div>
+
+        <ul class="container_menu" id="menu_options">
+            <li class="menu_item"><a href="./index.html">Mecatrónica</a></li>
+            <li class="menu_item"><a href="./advanges-disadvanges.html">Ventajas y desventajas</a></li>
+            
+            <li id="contact_li" class="menu_item"><a href="./impacto-ambiental.html">Impacto Ambiental</a></li>
+            <li class="menu_item"><a href="./plan.html">Plan de acción</a></li>
+            <li class="menu_item"><a href="./conclusion.html">Conclusiones</a></li>
+        </ul>
+
+        <label id="bars" onclick="document.getElementById('menu_options').toggleClass('hide')">
+            <i class="fa fa-bars"></i>
+        </label>
+    </header>
+    <main>
+        <section class="container">
+            <div class="title">
+                <h1>¿Cuáles son nuestras conclusiones?</h1>
+            </div>
+            <div class="frame">
+                <span id="button_minus" class="button_picture" style=" -webkit-text-stroke: 2px black; color: transparent;"> <i class="fa fa-arrow-left"></i> </span>
+                <div class="container_info">
+                    <span id="info_conclution">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aut sed libero ducimus veritatis!</span>
+                    <img src="" class="img_conclution" id="image_conclution"></img>
+                </div>
+                <span id="button_plus" class="button_picture" style=" -webkit-text-stroke: 2px black; color: transparent;"> <i class="fa fa-arrow-right"></i> </span>
+            </div>
+            <div class="footer">
+                <div class="download_container">
+                   
+                    <!--<button class="button_download powerpoint" onclick='Descarga("./assets/files/pp.pptx","powerpointDescargado.pptx")'><i class="fa fa-file-powerpoint-o"></i></button>-->
+                    <button title="Equipo Act1" class="button_download pdf" onclick='Descarga("./assets/files/Equipo-2-Grupo-037-A1-ATI (1).pdf","Equipo-2-Grupo-037-A1-ATI (1).pdf")'><i class="fa fa-file-pdf-o"></i></button>
+                    <button title="Equipo Act2" class="button_download pdf" onclick='Descarga("./assets/files/Equipo-2-Grupo-037-A2-ATI (1).pdf","Equipo-2-Grupo-037-A2-ATI (1).pdf")'><i class="fa fa-file-pdf-o"></i></button>
+                    <button title="GRAFICOS DE EXCEL" class="button_download excel" onclick='Descarga("./assets/files/GRAFICOS DE EXCEL-Problematiac-Equipo-2 (1).xlsx","GRAFICOS DE EXCEL-Problematiac-Equipo-2 (1).xlsx")'><i class="fa fa-file-excel-o"></i></button>
+                    <button title="Video de youtube" class="button_download video" onclick='document.getElementsByClassName("modal_video_container")[0].classList.add("active")'><i class="fa fa-youtube-play"></i></button>
+                </div>
+                
+            </div>
+            <div class="barrer">
+                
+            </div>
+        </section>
+
+        <section class="modal_video_container">
+            <div class="modal_video">
+                <button class="button_youtube" onclick='document.getElementsByClassName("modal_video_container")[0].classList.remove("active")'><i class="fa fa-close"></i></button>
+                <div class="modal_video_show">
+                    <iframe width="90%" height="90%" src="https://www.youtube.com/embed/whx6HgnCmY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+
+        
+
+        
+
+        var counter = 0;
+        
+        const $plus = document.getElementById("button_plus");
+        const $minus = document.getElementById("button_minus");
+        const $img = document.getElementById("image_conclution");
+        const $info = document.getElementById("info_conclution");
+        $img.src = ""+data[0].img;
+        $info.textContent = data[0].text;
+        $plus.addEventListener("click",()=>{
+            console.log(counter);
+            let stateArray = data.length - 1;
+            if(counter < stateArray){
+                
+                counter++;
+                
+                $img.src = "" + data[counter].img;
+                $info.textContent = data[counter].text;
+            }
+
+        })
+        
+        $minus.addEventListener("click",()=>{
+            console.log(counter);
+            let stateArray = data.length - 1;
+            if(counter > 0){
+                
+                counter--;
+                $img.src = "" + data[counter].img;
+                $info.textContent = data[counter].text;
+            }
+
+        })
+        
+     
+    </script>
+</body>
+</html>

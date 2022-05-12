@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    scroll-behavior: smooth;
+    /* background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%); */
+    
+}
+
+.cover {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background: url("./../img/mechatronic.jpg"); */
+    /* background-size: cover;
+    background-position: center; */
+    display: flex;
+    flex-direction: row;
+    /* place-items: center; */
+}
+
+.cover_photo {
+    height: 100%;
+    width: 55%;
+    background-color: red;
+    background: url("./../img/wall-e.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+.cover::before{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .5);
+    z-index: 2;
+    position: absolute;
+}
+
+.cover_info {
+    height: 100%;
+    width: 45%;
+    background-color: #111;
+    font-family: 'Nunito';
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding-left: 2rem;
+    color:#fff;
+    z-index: 3;
+
+}
+
+.cover_info .title span {
+    color: white;
+    font-size: 6.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+}
+
+
+
+.definition{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    /*background-color: green;*/
+    justify-content: center;
+    margin: 0;
+    flex-wrap:wrap;
+    align-content: center;
+}
+
+.definition .info_definition{
+    width: 45%;
+    /*background-color: red;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    max-height: 70%;
+}
+.definition .info_definition span{
+    margin: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    overflow: scroll;
+    /*background-color: red;*/
+    height: 70%;
+    
+    min-height: 65%;
+    max-height: 80%;
+
+   
+}
+
+
+.definition .info_definition span::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.definition .info_definition span::-webkit-scrollbar:vertical {
+    width:8px;
+    background-color: transparent;
+}
+
+.definition .info_definition span::-webkit-scrollbar-button:increment,.definition .info_definition span::-webkit-scrollbar-button {
+    display: none;
+    
+} 
+
+.definition .info_definition span::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+.definition .info_definition span::-webkit-scrollbar-thumb {
+    background-color: rgba(1, 1, 1, .2);
+    border-radius: 20px;
+    border: 2px solid rgba(1, 1, 1, .5);
+    margin: 3px;
+}
+
+.definition .info_definition span::-webkit-scrollbar-track {
+    border-radius: 1px;  
+    background-color: transparent;
+}
+
+
+
+.definition .photo_definition{
+    width: 35%;
+    height: 50%;
+    max-width: 40%;
+    max-height: 60%;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.definition .photo_definition:hover{
+    transform: scale(1.02);
+}
+
+.img1{
+    background: url("./../img/img1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img2{
+    background: url("./../img/robotica.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img3{
+    background: url("./../img/mecanica.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img4{
+    background: url("./../img/electronica.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img5{
+    background: url("./../img/informatica.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img6{
+    background: url("./../img/medicina.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img7{
+    background: url("./../img/automotriz.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img8{
+    background: url("./../img/manufactura.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img9{
+    background: url("./../img/mina.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.img10{
+    background: url("./../img/agricola.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+

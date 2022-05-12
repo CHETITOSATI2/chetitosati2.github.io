@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition:all 1s;
+    transition-delay: 1s;
+    transform-origin: right;
+}
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    /* background: radial-gradient(#d35400, black); */
+    /* background: linear-gradient(180deg, rgba(0,0,0,1) 40%, rgba(54,0,25,1) 90%); */
+}
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*background-color: rgb(224, 63, 35);*/
+    background-color: #feca57;
+    overflow: hidden;
+}
+
+.container .title h1{
+    margin: 30px;
+    font-family: 'Poppins', sans-serif;
+    /*background-color: yellow;*/
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+
+.barrer {
+    position: absolute;
+    left: 40rem;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    border-top: 100vh solid transparent;
+    border-left: 100vw solid transparent;
+    /*
+    border-right: 100vw solid rgba(1, 1, 1,.85);
+    border-bottom: 100vh solid rgba(1, 1, 1,.85); 
+    */
+    border-right: 100vw solid rgb(231, 51, 60);
+    border-bottom: 100vh solid rgb(231, 51, 60); 
+    /* background-color: rgb(231, 51, 60);*/
+}
+.container .frame {
+    /*background-color: blue;*/
+    z-index: 2;
+    width: 70%;
+    height: 70%;
+    border-radius: 2rem;
+    box-shadow: 2rem 2rem 8rem rgba(0,0,0,.3);    
+    display: flex;
+    
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    transition: all .9s;
+    
+}
+
+
+.container .frame .container_info{
+    width: 90%;
+    height: 90%;
+    /*background-color: gray;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container .frame .container_info span{
+    margin: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    overflow: scroll;
+    max-height: 80%;
+}
+
+
+.container .frame .container_info span::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.container .frame .container_info span::-webkit-scrollbar:vertical {
+    width:8px;
+    background-color: transparent;
+}
+
+.container .frame .container_info span::-webkit-scrollbar-button:increment,.container .frame .container_info span::-webkit-scrollbar-button {
+    display: none;
+    
+} 
+
+.container .frame .container_info span::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+.container .frame .container_info span::-webkit-scrollbar-thumb {
+    background-color: rgba(1, 1, 1, .2);
+    border-radius: 20px;
+    border: 2px solid rgba(1, 1, 1, .5);
+    margin: 3px;
+}
+
+.container .frame .container_info span::-webkit-scrollbar-track {
+    border-radius: 1px;  
+    background-color: transparent;
+}
+
+
+
+
+.container .frame .container_info .img_conclution{
+    max-width: 45%;
+    border-radius: 10px;
+    background: url("./../img/conclusion/desarrollo.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 90%;   
+    transition: all .9s;
+    transform: rotate(-7deg);
+}
+
+
+.container .frame .container_info .img_conclution:hover{
+    transform: scale(1.07);
+}
+
+.button_picture{
+    /*background-color: yellow;*/
+    margin: 20px;
+    font-size: 50px;
+    
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: all .7s;
+    
+}
+
+.button_picture:hover{
+    transform: scale(1.2);
+}
+
+
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer .download_container{
+    background-color: transparent;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .download_container .button_download{
+    padding: 20px;
+    background-color: transparent;
+    color:white;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 2px solid white;
+    cursor:pointer;
+    
+    font-size: 22px;
+    font-style: italic;
+    margin: 10px;
+    border-radius: 50%;
+
+}
+.button_youtube{
+    padding: 20px;
+    background-color: transparent;
+    color:black;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 2px solid #fff;
+    cursor:pointer;
+    
+    font-size: 22px;
+    font-style: italic;
+ 
+    border-radius: 50%;
+    align-self: flex-end;
+
+}
+.footer .download_container .powerpoint:hover{
+    border:2px solid #fa8231;
+    background-color: #fa8231;
+    color:black;
+    content: "Powerpoint";
+}
+.footer .download_container .pdf:hover{
+    border:2px solid red;
+    background-color: red;
+    color:white;
+    content: "Pdf";
+}
+
+.footer .download_container .excel:hover{
+    border:2px solid #111;
+    background-color: #111;
+    color:white;
+    content: "Excel";
+}
+
+.footer .download_container .video:hover{
+    border:2px solid red;
+    background-color: red;
+    color:white;
+    content: "Video";
+}
+
+
+.modal_video_container{
+    display: none;
+
+}
+.modal_video_container.active{
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 1, 1, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: show .8s linear forwards;
+    transition: all 1s;
+}
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.modal_video{
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+.modal_video_show{
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+
