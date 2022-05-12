@@ -79,10 +79,13 @@ body{
     transition: 1s;
 }
 .modal.minimize {
-    animation-name: animate-minimizing;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+   
+   
     height: 50vh;
+    justify-content: flex-end;
+}
+.modal.minimize div {
+    margin: 1rem;
 }
 @keyframes animate-minimizing {
     0% {

@@ -11,9 +11,34 @@
     <link rel="stylesheet" href="./assets/fonts/Nunito/stylesheet.css">
 
     <link rel="stylesheet" href="./assets/css/font-awesome.css">
+
+    
+    <link rel="stylesheet" href="assets/css/style_header.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+    <script src="assets/js/jquery-3.2.1.js"></script>
+    <script src="assets/js/events.js"></script>
 </head>
 <body>
-    <header></header>
+    <header class="header">
+
+        <div class="container_name">
+            <p class="container_name_text"></p>
+        </div>
+
+        <ul class="container_menu" id="menu_options">
+            <li class="menu_item"><a href="./index.html">Mecatrónica</a></li>
+            <li class="menu_item"><a href="./advanges-disadvanges.html">Ventajas y desventajas</a></li>
+            
+            <li id="contact_li" class="menu_item"><a href="./impacto-ambiental.html">Impacto Ambiental</a></li>
+            <li class="menu_item"><a href="./plan.html">Plan de acción</a></li>
+            <li class="menu_item"><a href="./conclusion.html">Conclusiones</a></li>
+        </ul>
+
+        <label id="bars" onclick="document.getElementById('menu_options').toggleClass('hide')">
+            <i class="fa fa-bars"></i>
+        </label>
+    </header>
     <main>
         <section class="coverpage">
             <img src="./assets/img/impact/main-background.jpg" alt="">
