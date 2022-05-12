@@ -120,7 +120,25 @@
             }
 
         })
-
+        
+        var timer = setInterval(displayImg,5000);
+        function displayImg(){
+            let stateArray = data.length - 1;
+            if(counter < stateArray){
+                
+                counter++;
+                
+                $img.src = "" + data[counter].img;
+                $info.textContent = data[counter].text;
+            }else if(counter > 0){
+                
+                counter--;
+                $img.src = "" + data[counter].img;
+                $info.textContent = data[counter].text;
+            }else{
+                clearInterval(timer)
+            }
+        }
     </script>
 </body>
 </html>
